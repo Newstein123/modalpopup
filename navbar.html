@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* navabar  */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            display: inline-block;
+        }
+
+        ul li a {
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        /* loginform  */
+
+        .main-container {
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            background-color: grey;
+            opacity: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            background: rgba(0,0,0,0.8);
+        }
+        .login-container {
+            transform: translateY(-1000px);
+            transition: all 2s;
+            margin: auto;
+        }
+        .login {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 20px;
+            background-color: brown;
+            transition: 1s all ease-in-out;
+            border: none;
+            box-shadow: 1px 2px 1px 2px goldenrod;
+            z-index: 100;
+        }
+
+        .login input {
+            display: block;
+            margin: 20px 5px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .login button {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+        .login .close {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            color: white;
+            padding: 0px 10px;
+            background-color: black;
+        }
+        .main-container:target {
+            visibility: visible ;
+            opacity: 1;
+            transition-delay: 0.5s;
+            transition-duration: 1s;
+        }
+
+        .main-container:target  .login-container {
+            transform: translateY(300px);
+        }
+
+    
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <span> Some Logo </span>
+        </div>
+        <div class="menu-bar">
+            <ul>
+                <li> <a href="">Home </a></li>
+                <li> <a href="">About Us</a> </li>
+                <li> <a href="">Contacts </a></li>
+                <li> <a href="">Register</a> </li>
+                <li> <a href="">Projects </a></li>
+            </ul>
+        </div>
+        <div class="modal">
+            <a href="#popup"> Login  </a>
+        </div>
+    </div>
+    <div class="main-container" id="popup">
+        <div class="login-container">
+            <div class="login">
+                <a href="#" class="close"> &times; </a>
+                <h3> Login Form </h3>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Enter Your Name">
+                    <input type="password" name="" id="" placeholder="Enter Your Password">
+                    <button type="submit"> Login </button>  <br>
+                    <small> If you don't have an account <a href=""> Register </a></small>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
