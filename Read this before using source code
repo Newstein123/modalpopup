@@ -1,0 +1,5 @@
+# modalpopup
+By hovering button tab, you can popup a modal using => tagname:hover {} 
+By clicking button tab, you can pop up a modal using => tagname:target {} / tagname => target tagname / button => a link has target tagname id 
+By using input element, you can pop up a modal using => inputId:checked {}
+By combination of visibility and opacity, you can pop up a modal easily =>  see in modalup.html
